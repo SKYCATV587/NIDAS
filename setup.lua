@@ -17,8 +17,8 @@ gpu.fill(width / 2 - 11, height / 2 - 3, 23, 6, "▄")
 gpu.fill(width / 2 - 10, height / 2 - 2, 21, 4, " ")
 gpu.setForeground(colorA)
 gpu.set(width / 2 - 7, height / 2 - 2, "Updating NIDAS")
-local tarMan = "https://raw.githubusercontent.com/mpmxyz/ocprograms/master/usr/man/tar.man"
-local tarBin = "https://raw.githubusercontent.com/mpmxyz/ocprograms/master/home/bin/tar.lua"
+local tarMan = "https://ghproxy.com/https://raw.githubusercontent.com/mpmxyz/ocprograms/master/usr/man/tar.man"
+local tarBin = "https://ghproxy.com/https://raw.githubusercontent.com/mpmxyz/ocprograms/master/home/bin/tar.lua"
 
 shell.setWorkingDirectory("/usr/man")
 shell.execute("wget -fq " .. tarMan)
@@ -28,11 +28,11 @@ shell.execute("wget -fq " .. tarBin)
 local NIDAS
 local arg = {...}
 if arg[1] == "test" or arg[1] == "latest" then
-    NIDAS = "https://github.com/S4mpsa/NIDAS/releases/download/v-1/NIDAS.tar"
+    NIDAS = "https://ghproxy.com/https://github.com/S4mpsa/NIDAS/releases/download/v-1/NIDAS.tar"
 elseif arg[1] == "dev" or arg[1] == "staging" then
-    NIDAS = "https://github.com/S4mpsa/NIDAS/releases/download/v0/NIDAS.tar"
+    NIDAS = "https://ghproxy.com/https://github.com/S4mpsa/NIDAS/releases/download/v0/NIDAS.tar"
 else
-    NIDAS = "https://github.com/S4mpsa/NIDAS/releases/latest/download/NIDAS.tar"
+    NIDAS = "https://ghproxy.com/https://github.com/S4mpsa/NIDAS/releases/latest/download/NIDAS.tar"
 end
 
 local successful =
